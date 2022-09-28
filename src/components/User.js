@@ -22,8 +22,6 @@ const User = (props) => {
       return item.gender === e.target.value;
     });
 
-    console.log(update);
-
     setCurrentUser(update);
   };
   return (
