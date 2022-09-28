@@ -1,0 +1,15 @@
+.container {
+    @apply w-full;
+}
+
+.page-numbers {
+    li {
+        &.active {
+            @apply border-2 rounded-full font-bold;
+        }
+
+        @apply mx-2 p-2 cursor-pointer;
+    }
+
+    @apply flex items-center justify-center;
+}

@@ -1,0 +1,7 @@
+.items {
+    @apply flex flex-wrap;
+
+    &__item {
+        @apply flex flex-col items-center m-2 py-5 px-3 bg-white rounded-[15px] shadow;
+    }
+}
