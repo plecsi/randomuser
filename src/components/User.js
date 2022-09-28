@@ -10,7 +10,9 @@ const User = (props) => {
   const [currentUser, setCurrentUser] = useState(readStore("users"));
   const PER_PAGE = 10;
 
-  const count = Math.ceil(items.length / PER_PAGE);
+  const count = Math.ceil(
+    (currentUser ? currentUser.length : items.length) / PER_PAGE
+  );
   const USER = usePagination(currentUser ? currentUser : items, PER_PAGE);
 
   const handleChange = (page) => {
