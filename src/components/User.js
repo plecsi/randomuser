@@ -11,7 +11,7 @@ const User = (props) => {
   const PER_PAGE = 10;
 
   const count = Math.ceil(items.length / PER_PAGE);
-  const USER = usePagination(currentUser, PER_PAGE);
+  const USER = usePagination(currentUser ? currentUser : items, PER_PAGE);
 
   const handleChange = (page) => {
     setPage(page);
@@ -21,6 +21,8 @@ const User = (props) => {
     const update = items.filter((item, index) => {
       return item.gender === e.target.value;
     });
+
+    console.log(update);
 
     setCurrentUser(update);
   };
